@@ -1,0 +1,13 @@
+resource "aws_eip" "jelee_eip_ng" {
+  vpc      = true
+}
+
+resource "aws_nat_gateway" "jelee_ng" {
+  allocation_id = aws_eip.jelee_eip_ng.id
+  subnet_id     = aws_subnet.jelee_puba.id
+
+  tags = {
+    "Name" = "jelee-ng"
+  }
+  depends_on = [aws_internet_gateway.jelee_ig]
+}

@@ -1,0 +1,4 @@
+resource "aws_placement_group" "jelee_place" {
+  name     = "jelee-place"
+  strategy = "cluster"
+}

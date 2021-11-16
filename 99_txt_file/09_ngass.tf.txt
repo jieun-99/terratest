@@ -1,0 +1,9 @@
+resource "aws_route_table_association" "jelee_ngass_a" {
+  subnet_id      = aws_subnet.jelee_pria.id
+  route_table_id = aws_route_table.jelee_ngrt.id
+}
+
+resource "aws_route_table_association" "jelee_ngass_c" {
+  subnet_id      = aws_subnet.jelee_pric.id
+  route_table_id = aws_route_table.jelee_ngrt.id
+}

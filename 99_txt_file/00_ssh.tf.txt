@@ -1,0 +1,5 @@
+resource "aws_key_pair" "jelee_key" {
+  key_name = "jelee2-key"
+  # public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAsJloMV9jarr/sy85jbDWUljPcGLIdQF7tuB9J3d/spiIE2ub0axdw6K2BwnWaSAhL+Tk143u0OEd430ZhNuv7GW67nKGZLMCVZGo25oDLSGDKZbRpNYo9rMdgV3zbk7GSXi2s7qNmIa0W+02Wp5vRdpYd7tb1jJwHoErNEEU/EUMRDpL0bSJFRknmEg3GTFml9mA81ldddC2EfCo53SysqvHYhhp1qF0SUdaz0TqIyfBUC08tXCvxXHYnLQ5x1UsM/ykwV5XEAQyFpNgROS14f3fMgtI8/IFTIeK6dqq6EoI9y8BlHavvP4Ob4i5qOFzoVAs3WuOPmWCbUMEKhaiZZyRo8iWrqttfRrnWbPJeoBLNk80wfzQEmTxfsbe6f13947nrAWMFxZTpWal5hPt8zUtz4/S0j/E8xQvUSyG+I7py5QpSN8X4WYgujh5uoM5roe0VulOPLNOJmIq+PJqnW/vmPKJcvld0xC0LfzFs8OP2GYE+FHGoq4vVrYPqhs="
+  public_key = file("../../.ssh/jelee-key.pub")
+}

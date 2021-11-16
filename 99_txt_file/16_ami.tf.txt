@@ -1,0 +1,12 @@
+resource "aws_ami_from_instance" "jelee_ami" {
+  name               = "jelee-aws_ami"
+  source_instance_id = aws_instance.jelee_weba.id
+
+  depends_on = [
+    aws_instance.jelee_weba
+  ]
+
+  tags ={
+    "Name" = "jelee-aws-ami"
+  }
+}

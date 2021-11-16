@@ -1,0 +1,15 @@
+resource "aws_lb" "jelee_alb" {
+  name               = "jelee-alb"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = [aws_security_group.jelee_sg.id]
+  subnets            = [aws_subnet.jelee_puba.id, aws_subnet.jelee_pubc.id]
+
+  tags = {
+    "Name" = "jelee-alb"
+  }
+}
+
+output "alb_dns"{
+  value = aws_lb.jelee_alb.dns_name
+}
